@@ -13,7 +13,14 @@
     font-style: normal;
 }
 
-/* 1. TAMAÑO NORMAL (Escritorio/Tablet) */
+:root {
+    --main-color: #59468d;
+    --main-font: 'montserrat', sans-serif;
+    --second-font: 'merriweather', serif;
+}
+
+/********************************************************************************/
+
 .contenedor-padre {
     display: flex;
     gap: 20px; /* Espacio entre columnas */
@@ -24,20 +31,6 @@
     padding: 20px;
     background: #f4f4f4;
 }
-
-/* 2. TAMAÑO ESTRECHO (Móviles) */
-/* Usamos @media para cuando el ancho sea menor a 600px */
-@media (max-width: 600px) {
-    .contenedor-padre {
-        flex-direction: column; /* Cambia de fila a columna (se apilan) */
-    }
-
-    .columna {
-        width: 100%;
-    }
-}
-
-/***********************************************************************/
 
 * {
     box-sizing: border-box;
@@ -52,6 +45,10 @@ body {
     margin: 0;
     background-color: white;
 }
+
+/********************************************************************************/
+/*                                 MOBILE-FIRST                                 */
+/********************************************************************************/
 
 .header-decoration-bar {
     position: fixed;
@@ -120,6 +117,86 @@ header {
 .nav-link:hover {
     color: #59468d;
 }
+
+
+/********************************************************************************/
+/*                                    DESKTOP                                   */
+/********************************************************************************/
+
+@media (min-width: 620px) {
+
+    .header-decoration-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10vh;
+        background-color: #59468d;
+        z-index: 5;
+        pointer-events: none;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 10vh;
+        z-index: 1000;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 10vh;
+        padding: 0 2vw;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 2vw;
+    }
+
+    .nav-link {
+        position: relative;
+        display: inline-block;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: white;
+        z-index: 1;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        bottom: -5px;
+        left: -15px;
+        right: -15px;
+        
+        background-color: white;
+        border-radius: 4px;
+        z-index: -1;
+
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        transform: scaleX(1);
+    }
+
+    .nav-link:hover {
+        color: #59468d;
+    }
+
+}
+
+/***********************************************************************/
+
 
 #cover-page {
     position: relative;
