@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@
     <main>
 
         <section class="section-content" id="cover-page">
-            <video autoplay muted loop playsinline id="cover-video" poster="assets/video/portrait.png">
+            <video autoplay muted loop playsinline id="cover-video" poster="assets/video/portrait.png" aria-label="SE muestran multiples imagenes de personas conviviendo tranquilas en su logar de trabajo, con su familia o pareja">
                 <source src="assets/video/portrait.webm" type="video/webm">
                 Tu navegador no soporta videos HTML5.
             </video>
@@ -43,20 +44,50 @@
                 <a href="#contacto" class="cta-button">Comienza ahora</a>
             </div>
         </section>
-<!--
-        <section class="section-content" id="tratamientos">
+
+        <section class="section-content section-odd" id="tratamientos">
             <h2>¿Cómo te sientes hoy?</h2>
             <p>Un espacio para cada emoción. Descubre cómo podemos ayudarte.</p>
-            <ul class="tratamientos-lista">
-                <li>Estado de Ánimo</li>
-                <li>Gestión de la Ansiedad</li>
-                <li>Relaciones Sanas</li>
-                <li>Amor Propio</li>
-                <li>Regulación Emocional</li>
-                <li>Crecimiento Personal </li>
-            </ul>
+            <div class="tratamientos-lista">
+                <div class="card">
+                    <div>
+                        <img src="assets/img/card-anxiety.svg" alt="Un simbolo que representa a una persona con ansiedad">
+                    </div>
+                    <h3>Ansiedad</h3>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="assets/img/card-depression.svg" alt="Un simbolo que representa a una persona con depresión">
+                    </div>
+                    <h3>Depresion</h3>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="assets/img/card-emotions.svg" alt="Un simbolo que representa a una persona sintiendo varias emociones">
+                    </div>
+                    <h3>Regulación Emocional</h3>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="assets/img/card-growth.svg" alt="Un simbolo que representa creciemiento personal">
+                    </div>
+                    <h3>Crecimiento Personal</h3>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="assets/img/card-relations.svg" alt="Un simbolo que representa dos personas enamoradas">
+                    </div>
+                    <h3>Relaciones Sanas</h3>
+                </div>
+                <div class="card">
+                    <div>
+                        <img src="assets/img/card-selflove.svg" alt="Un simbolo que representa el amor propio">
+                    </div>
+                    <h3>Amor Propio</h3>
+                </div>
+            </div>
         </section>
-
+<!--
         <section class="section-content" id="quien-soy">
             <div class="quien-soy-contenido">
                 <img src="assets/foto-terapeuta.jpg" alt="Foto del Terapeuta">
